@@ -1,0 +1,124 @@
+/* ?Aspectos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+/* *Estilo:  
+*font-family: 'Poppins', sans-serif; */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 15px;
+    background: hsl(0, 0%, 98%);
+}
+/* ?Editando para movil */
+.contenedor {
+    margin: 70px 30px 70px 30px;
+}
+/* *Editando cosas en comun */
+.card1, .card2, .card3, .card4 {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    padding: 25px;
+    border-top: 5px solid;
+    box-shadow: 0px 10px 20px hsl(229, 6%, 66%);
+    margin-bottom: 2em;
+}
+img{
+    padding-top: 17%;
+    padding-left: 76%;
+}
+/* *Titulo y parrafo principal */
+.cont_principal {
+    text-align: center;
+    padding-bottom: 4em;
+}
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+    font-size: 1.62em;
+}
+u {
+    text-decoration: none;
+    font-weight: 200;
+}
+p {
+    font-family: 'Poppins', sans-serif;
+    color: hsl(229, 6%, 66%);
+    font-weight: 400;
+}
+/* *Editando las cards */
+h3 {
+    font-family: 'Poppins', sans-serif;
+    color: hsl(234, 12%, 34%);
+    font-size: 1.45em;
+    line-height: 2;
+}
+.card_parrafo {
+    font-size: 0.96em;
+}
+.card1 {
+    border-color: hsl(180, 62%, 55%);
+}
+.card2 {
+    border-color: hsl(0, 78%, 62%);
+}
+.card3 {
+    border-color: hsl(34, 97%, 64%);
+}
+.card4 {
+    border-color: hsl(212, 86%, 64%);
+    margin-top: 0;
+}
+/* ?Editando para Deslop */
+@media screen and (min-width: 1200px){
+    .contenedor {
+        margin: 70px 70px 70px 70px;
+    }
+    .card_content {
+        display: grid;
+        height: 570px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "carta1  carta2 carta4"
+        "carta1    carta3 carta4";
+        align-items: center;
+    }
+    /* *Editando cosas en general */
+    .card1, .card2, .card3, .card4 {
+        width: 375px;
+    }
+    img{
+        padding-top: 15%;
+        padding-left: 80%;
+    }
+    .cont_principal h2 {
+        font-size: 2.7em;
+    }
+    .principal {
+        padding: 0 400px 0 400px;
+    }
+    /* *Editando las cards */
+    .card1 {
+        margin-left: auto;
+    }
+    .card2, .card3  {
+        margin: auto;
+    }
+    .card_content > .card1 {
+        grid-area: carta1;
+    }
+    .card_content > .card2 {
+        grid-area: carta2;
+    }
+    .card_content > .card3 {
+        grid-area: carta3;
+    }
+    .card_content > .card4 {
+        grid-area: carta4;
+    }
+}
+
+
